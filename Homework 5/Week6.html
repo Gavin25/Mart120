@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="Main.css" type="text/css">
+    <style>
+      body{
+        background-color: beige
+      }
+    </style>
+    <script>
+      function changeText()
+      {
+          //var name = window.prompt("What is your name?");
+          //  document.write("Nice to meet you, " + name);
+          var name = document.getElementById("txtName").value;
+          if(name == "")
+          {
+            document.getElementById("myText").innerHTML = "Please enter your name";
+          }
+          else {
+            {
+                document.getElementById("myText").innerHTML = "Nice to meet you, " + name;
+            }
+          }
+
+          }
+          //var name = window.prompt("What is your name?");
+          //document.write("Nice to meet you, " + name);
+    </script>
+  </head>
+  <body style="border: blue;">
+    <span id="myText">This is starter text</span>
+    <input id="txtName" type="text">
+    <button onclick="changeText();">Click me!</button>
+
+    <br>
+    <script>
+      changeText();
+    </script>
+  </body>
+</html>
