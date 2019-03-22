@@ -15,27 +15,57 @@
           var name = document.getElementById("txtName").value;
           if(name == "")
           {
-            document.getElementById("myText").innerHTML = "Please enter your name";
+            document.getElementById("myText").innerHTML = "Required";
           }
-          else {
+          else
             {
                 document.getElementById("myText").innerHTML = "Nice to meet you, " + name;
             }
           }
 
+      function ChangeText()
+      {
+          var animal = document.getElementById("TxtName").value;
+          if(animal == "")
+          {
+            document.getElementById("MyText").innerHTML = "Required";
           }
+          else
+            {
+                document.getElementById("MyText").innerHTML = "Your Favorite Animal is the " + animal;
+            }
+              }
+        function changetext()
+        {
+            var food = document.getElementById("textname").value;
+            if(food == "")
+            {
+              document.getElementById("mytext").innerHTML = "Required";
+            }
+            else
+              {
+                  document.getElementById("mytext").innerHTML = "Your Favorite Food is " + food;
+              }
+                }
           //var name = window.prompt("What is your name?");
           //document.write("Nice to meet you, " + name);
     </script>
   </head>
   <body style="border: blue;">
-    <span id="myText">This is starter text</span>
+    <span id="myText">Welcome to Wesley's Pages of Questions! What is your name?</span>
     <input id="txtName" type="text">
-    <button onclick="changeText();">Click me!</button>
-
+    <button onclick="changeText();">Click to confirm.</button>
     <br>
+    <br>
+    <span id="MyText">What is your favorite animal?</span>
+    <input id="TxtName" type="text">
+    <button onclick="ChangeText();">Click to confirm.</button>
+    <br>
+    <br>
+    <span id="mytext">What is your favorite food?</span>
+    <input id="textname" type="text">
+    <button onclick="changetext();">Click to confirm.</button>
     <script>
-      changeText();
     </script>
   </body>
 </html>
