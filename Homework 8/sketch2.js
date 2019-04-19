@@ -1,31 +1,39 @@
-var circleY= 0;
-var circleChange= 5;
-var rectX= 0;
-var rectChange= 7;
-var r= ;
-var g= ;
-var b= ;
+var r= 255;
+var g= 255;
+var b= 255;
 
-function setup(){
-
-  createCanvas(displayWidth,displayHeight);
+function setup()
+{
+  createCanvas(displayWidth, displayHeight, WEBGL);
   background(0);
 }
 
-function draw(){
-
-  background(r,g,b);
-  fill(13,223,28);
-  rectX += rectChange;
-  if (rectX > displayWidth || rectX < 0){
-    rectChange = circleChange * -1;
-  }
-  rect(rectX,circleY,300,100);
-
-  fill(250,78,99);
-  circleY += circleChange;
-  if (circleY > displayHeight || circleY < 0){
-    circleChange = circleChange * -1;
-    }
-  ellipse(450,circleY, 100)
+function draw()
+{
+  background(37,43,215);
+  fill(random(r),random(g),random(b));
+  createSphere(100,-500,0,"xDirection");
+  createSphere(57,475,30,"yDirection");
+  createSphere(30,240,120,"xDirection");
+  push();
+  translate(300,35);
+  rotateY(millis()/1000);
+  box(45);
+  pop(0);
 }
+
+function createSphere(radius, translateX, translateY, rotateDirection)
+{
+  push();
+  if(rotateDirection == "xDirection")
+  {
+  rotateX(millis()/1000);
+  }
+  else if(rotateDirection == "yDirection")
+  {
+  rotateY(millis()/1000);
+  }
+  translate(translateX,translateY);
+  sphere(radius,24,24);
+  pop();
+  }
