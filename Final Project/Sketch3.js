@@ -31,6 +31,14 @@ function endingScene1()
   text("Unfortunately, the dragon is stronger than you. Dying, you wonder what would have happened if you chose differently.",15,100);
   text("Try Again? Press Spacebar", 450,300);
   fill(255);
+
+  function keyPressed()
+  {
+      if(key == "Spacebar")
+      {
+      start();
+      }
+  }
 }
 
 function endingScene2()
@@ -39,6 +47,14 @@ function endingScene2()
     text("As you stand over the dead dragon, you look at the mountain of treasure, imagining what you are going to spend your new fortune on.", 15,100);
     text("Try for a new adventure? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene3()
@@ -47,6 +63,14 @@ function endingScene2()
     text("You didn't know girraffes were carnivorous. Now you know this one is, as it seems to prefer your leg to trees.",15,100);
     text("Try again? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene4()
@@ -55,6 +79,14 @@ function endingScene2()
     text("Your foot slips as you edge your way along the cliff. As you plummet, you watch the ground as it rises up to meet you.",15,100);
     text("Try again? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene5()
@@ -63,6 +95,14 @@ function endingScene2()
     text("As you set up the date, you think about how unlikely this was that you and a dragon would hit it off so well.",15,100);
     text("Try for a new adventure? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene6()
@@ -71,6 +111,14 @@ function endingScene2()
     text("You are hailed as the Lord of the Sparkle. Trying to give them your money was a suprisingly good idea.",15,100);
     text("Try for a new adventure? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene7()
@@ -79,6 +127,14 @@ function endingScene2()
     text("You keep walking down a surprisingly boring path. You, walking into the sunset, begin to wonder if anything will anything.",15,100);
     text("Try for an actual ending? Press Spacebar.", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene8()
@@ -87,6 +143,14 @@ function endingScene2()
     text("Walking into the town you find an old friend of yours, who recommends a classy bar, ending the night on a high note.",15,100);
     text("Try a new adventure? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function endingScene9()
@@ -95,6 +159,14 @@ function endingScene2()
     text("Running back to the giraffe, you realize why it was alone. Blood all over its face it begins to move towards you hungry.",15,100);
     text("Try again? Press Spacebar", 450,300);
     fill(255);
+
+    function keyPressed()
+    {
+        if(key == "Spacebar")
+        {
+        start();
+        }
+    }
   }
 
   function leftroad()
@@ -163,11 +235,94 @@ function endingScene2()
   {
       if(key == "1")
       {
-      clear();
       leftroad();
       }
       else if(key == "2")
       {
+      rightroad();
+      }
+  }
+
+  function keyPressed2()
+  {
+      if(key == "1")
+      {
+      Cliffside();
+      }
+      else if(key == "2")
+      {
+      Cave();
+      }
+  }
+
+  function keyPressed3()
+  {
+      if(key == "1")
+      {
+      jump();
+      }
+      else if(key == "2")
+      {
+      endingScene4();
+      }
+  }
+
+  function keyPressed4()
+  {
+      if(key == "1")
+      {
+      endingScene7();
+      }
+      else if(key == "2")
+      {
+      endingScene8();
+      }
+  }
+
+  function keyPressed5()
+  {
+      if(key == "1")
+      {
+      dragonFight();
+      }
+      else if(key == "2")
+      {
+      endingScene5();
+      }
+  }
+
+  function keyPressed6()
+  {
+      if(key == "1")
+      {
+      endingScene1();
+      }
+      else if(key == "2")
+      {
       endingScene2();
+      }
+  }
+
+  function keyPressed7()
+  {
+      if(key == "1")
+      {
+      goblins();
+      }
+      else if(key == "2")
+      {
+      endingScene3();
+      }
+  }
+
+  function keyPressed8()
+  {
+      if(key == "1")
+      {
+      endingScene6();
+      }
+      else if(key == "2")
+      {
+      endingScene9();
       }
   }
